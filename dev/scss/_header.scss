@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+.flex-nav,
+.sticky {
+  position: fixed;
+  top: 0;
+  background-color: white;
+  border-bottom: 2px solid #BB0052;
+  display: flex;
+  line-height: 50px;
+  flex-wrap: wrap;
+  z-index: 9999;
+  width: 100%;
+}
+
+.flex-nav ul,
+.sticky ul,
+.brandlogo img {
+  display: none;
+}
+
+.flex-nav ul.open,
+.sticky ul.open {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.flex-nav a,
+.sticky a {
+  margin: 0 auto;
+    text-decoration: none;
+}
+
+.headerimg {
+  width: 100vw;
+    height: 95vh;
+  border-bottom: 2px solid #BB0052;
+}
+
+.domore {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
