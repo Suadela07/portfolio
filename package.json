@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "TWD Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Suadela07/portfolio.git"
+  },
+  "author": "Crystal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Suadela07/portfolio/issues"
+  },
+  "homepage": "https://github.com/Suadela07/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
