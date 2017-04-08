@@ -2,10 +2,15 @@
 
 @import "ericreset";
 
-//@import "generalsettings";
+@import "typography";
+
+@import "generalsettings";
 
 @import "header";
 @import "work";
+@import "about";
+@import "skills";
+@import "contact";
 
 
 @import "mediaqueries";

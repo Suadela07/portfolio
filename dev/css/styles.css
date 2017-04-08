@@ -45,8 +45,63 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: "Noto";
+  src: url(../fonts/NotoSans-Regular.ttf); }
+
+@font-face {
+  font-family: "Patrick";
+  src: url(../fonts/PatrickHand-Regular.ttf); }
+
+@font-face {
+  font-family: "Rocksalt";
+  src: url(../fonts/RockSalt.ttf); }
+
+@font-face {
+  font-family: "Gochi";
+  src: url(../fonts/GochiHand-Regular.ttf); }
+
+a {
+  font-family: "Rocksalt";
+  font-size: 2em; }
+
+.contact a {
+  font-size: 1.5em;
+  text-decoration: none; }
+
+.contact h2 {
+  font-family: "Rocksalt";
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em; }
+
+.contact h4 {
+  font-family: "Noto";
+  font-size: 1.2em;
+  line-height: 3em; }
+
+p {
+  font-family: "Noto";
+  font-size: 1em;
+  line-height: 1.4em; }
+
+.first-char {
+  float: left;
+  font-size: 2em;
+  line-height: 0.5em;
+  padding: 4%; }
+
 * {
   box-sizing: border-box; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+img {
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .flex-nav {
   position: fixed;
@@ -90,12 +145,36 @@ table {
 
 .work {
   width: 100%;
-  margin-top: 60px; }
+  margin-top: 20%; }
 
 .work img {
   display: block;
   width: 90%;
   margin: 10px auto; }
+
+.about {
+  width: 90%;
+  margin: 20% auto; }
+
+.about img {
+  display: block;
+  width: 90%;
+  margin: 20px auto; }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20%; }
+
+.skills img {
+  width: 30%;
+  height: 50%;
+  margin: 5% auto; }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 20% auto; }
 
 @media only screen and (min-width: 768px) {
   .toggleNav,
