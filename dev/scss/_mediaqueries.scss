@@ -1,3 +1,52 @@
+@media only screen and (min-width: 420px) {
+    
+    .work {
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    
+    .about {
+        margin-top: 20%;
+    }
+    
+    .contact {
+        margin-top: 20%;
+    }
+    
+    .domore {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    
+    .skills img {
+        width: calc(76% / 4);
+        margin: 3%;
+    }
+}
+
+@media only screen and (min-width: 678px) {
+    
+    .work a {
+        width: 50%;    
+    }
+    
+    .about img {
+        width: 50%;
+    }
+    
+    .contact {
+        margin-top: 15%;
+    }
+    
+    .contact-info {
+        margin-left: 5%;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     
     .toggleNav,
@@ -7,8 +56,8 @@
     
     .brandlogo img {
         display: block;
-        height: 45px;
-        margin: 0 auto;
+        height: 47px;
+        margin: 2px auto;
     }
      
     .flex-nav ul {
@@ -22,7 +71,78 @@
         text-align: center;
     }
     
+    .domore {
+        display: block;
+    }
+    
+    .about-me {
+        width: 45%;
+        margin-right: 5%;
+    }
+    
+    .skills {
+        margin-top: 15%;
+    }
+}
+
+@media only screen and (min-width: 875px) {
+
+    .contact {
+        margin-top: 10%;
+    }
+    
+    .contact-info {
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    
+    .skills img {
+        width: calc(50% / 4);
+        margin: 6%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    .work a {
+        width: calc(100% / 3);
+    }
+    
+    .about {
+        margin-top: 15%;
+    }
+    
+    .about img {
+        width: 30%;
+    }
+    
+    .skills {
+        margin-top: 10%;
+    }
+    
+    .skills img {
+        margin: 3% 6%;
+    }
+}
+
+@media only screen and (min-width: 1360px) {
+    
     .overlay {
-        height: 13%;
+        width: 40%;
+        height: 93vh;
+        padding-top: 5%;
+    }
+    
+    .skills img {
+        margin: 2% 6%;
+    }
+}
+
+@media only screen and (min-width: 1525px) {
+    
+    .contact-info {
+        margin-left: 35%;
     }
 }

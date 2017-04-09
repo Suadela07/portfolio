@@ -20,7 +20,27 @@
 
 a {
     font-family: "Rocksalt";
+    font-size: 1.5em;
+}
+
+h1, h3 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+h1 {
+    font-family: "Rocksalt";
+    font-size: 3em;
+}
+
+h3 {
+    font-family: "Patrick";
     font-size: 2em;
+    margin-bottom: 5%;
+}
+
+.color {
+    color: #BB0052;
 }
 
 .contact a {
@@ -28,7 +48,7 @@ a {
     text-decoration: none;
 }
 
-.contact h2 {
+.contact h1 {
     font-family: "Rocksalt";
     font-size: 2em;
     text-align: center;
@@ -43,7 +63,7 @@ a {
 
 p {
     font-family: "Noto";
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.4em;
 }
 

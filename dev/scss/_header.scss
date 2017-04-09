@@ -34,12 +34,13 @@
 }
 
 .domore {
-    display: none;
+    display: block;
+    margin: 3% auto;
 }
 
 .overlay {
     position: absolute;
-    top: 70px;
+    top: 4em;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     color: white;
