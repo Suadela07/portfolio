@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yaletown Dog Training Client Project - Crystal Henderson - Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/libs/prism.css">
 
     <link rel="shortcut icon" type="image/ico" href="./favicon/favicon.ico" />
     <link rel="icon" type="image/png" href="./favicon/favicon-32x32.png" sizes="32x32">
@@ -55,10 +56,10 @@
             <h1>Yaletown Dog Training</h1>
 
             <div class="buttons">
-                <button type="button"><a href="skills.html">The Planning</a></button>
-                <button type="button"><a href="skills.html">The Design</a></button>
-                <button type="button"><a href="skills.html">The Code</a></button>
-                <button type="button"><a href="skills.html">The Live Site</a></button>
+                <button type="button"><a href="#link-planning">The Planning</a></button>
+                <button type="button"><a href="#link-design">The Design</a></button>
+                <button type="button"><a href="#link-code">The Code</a></button>
+                <button type="button"><a href="">The Live Site</a></button>
             </div>
 
             <div class="intro">
@@ -93,7 +94,7 @@
         </section>
 
         <section class="ytd-planning">
-            <h2>The Planning</h2>
+            <h2><span id="link-planning" class="link-element">&nbsp;</span>The Planning</h2>
 
             <div class="planning">
 
@@ -126,7 +127,7 @@
         </section>
 
         <section class="ytd-design">
-            <h2>The Design</h2>
+            <h2><span id="link-design" class="link-element">&nbsp;</span>The Design</h2>
 
             <div class="design-content">
                 <figure>
@@ -138,8 +139,8 @@
             </div>
         </section>
 
-        <section class="code-content">
-            <h2>The Code</h2>
+        <section class="code-header">
+            <h2><span id="link-code" class="link-element">&nbsp;</span>The Code</h2>
 
             <div class="ytd-col-01">
                 <button><a href="https://github.com/Suadela07/yaletowndog" target="blank">View On Github</a></button>
@@ -160,11 +161,156 @@
             </div>
         </section>
         
+        <section class="prism-code">
+            <h5>Videos Page Isotope</h5>
+            <pre><code class="language-php">
+&lt;main id="main" class="site-main" role="main">
+    &lt;h2 class="filtertitle">Video Categories:&lt;/h2> 
+        &lt;section class="filter widget"> 
         
+            &lt;ul id="filters" class="filter-list" data-group="video-category"> 
+                &lt;li>&lt;a href="#" data-filter="*" class="selected">All&lt;/a>&lt;/li>
+
+                &lt;?php
+                    $terms = get_terms( 'video-category' );
+                        if ( !empty( $terms ) && !is_wp_error( $terms ) ) {
+                            foreach( $terms as $term) {
+                            echo '&lt;li>&lt;a href="#" data-filter=".'.$term->slug.'">' . $term->name . '&lt;/a>&lt;/li>';
+                        }
+                    }
+                ?>
+            &lt;/ul> &lt;/section> &lt;div id="video-list" class="video-flex-wrapper">
+
+        &lt;?php
+            $args = array(
+                'post_type'=> 'video',
+                'posts_per_page' => -1
+            );
+
+            $videos = new WP_Query($args);
+
+            if ( $videos->have_posts() ) {
+                while($videos->have_posts()) {
+                    $videos->the_post();
+
+                    $termList = get_the_terms( $post->object, 'video-category' );
+                    $termName = "";
+
+                    foreach ( $termList as $term ) { // for each term
+                        $termName .= $term->slug.' '; //create a string that has all the slugs
+                    }
+
+                    if( function_exists('get_field') ) {
+                        if( get_field('video_url') ) {
+                            echo '&lt;div class="'. $termName. 'item video-item">';
+                            the_field('video_url');
+                            echo '&lt;h3 class="video-time-title">';
+                            the_title();
+                            echo '&lt;/h3>';
+                        }
+
+                        if( get_field('video_description') ) {
+                            echo '&lt;p class="video_description">';
+                            the_field('video_description');
+                            echo '&lt;/p>';
+                        }
+                    echo '&lt;/div>';
+                    }
+                }
+            }
+        ?>
+    &lt;/div><!-- video-flex-wrapper -->
+&lt;/main><!-- #main -->
+		</code></pre>
+        </section>
+        
+        <section class="code-content">
+            <figure>
+                <img src="images/yaletowndog-new.jpg" alt="">
+                <figcaption>Yaletown Dog Training Home Page</figcaption>
+            </figure>
+            
+            <p><span class="first-char">I</span> was in charge of laying out the front page image slider and learning how to use the advanced custom field repeater to display the services and page description. As this was the first time we had used this advanced custom field and needed the icons to link to their corresponding pages, there was a lot of reading and trial and error to get the sections to display how we wanted them to. The floating text over the image gallery slider was also a challenge as we dealt with positioning the quotes in a way that allowed for them to be responsive across all devices. I also created custom icons in Adobe Illustrator for our client to use for the different sections with inverted copies that she can substitute if desired.</p>
+        </section>
+        
+        <section class="prism-code">
+            <h5>Front Page Gallery</h5>
+            <pre><code class="language-php">
+&lt;?php if( have_rows('image_slider') ): ?>
+&lt;div class="flexslider gallery-slider">
+	&lt;ul class="slides gallery-slides">
+		&lt;?php while( have_rows('image_slider') ): the_row();
+			$image = get_sub_field('slider_image');
+			$quote = get_sub_field('slider_quote');
+			$author = get_sub_field('slider_author');
+			$url = $image['url'];
+			$alt = $image['alt'];
+			$size = 'large-slider';
+			$myimage = $image['sizes'][ $size ];
+			$width = $image['sizes'][ $size . '-width' ];
+			$height = $image['sizes'][ $size . '-height' ];
+		?>
+		&lt;li>
+			&lt;div class="slider-text">
+				&lt;?php if( $quote ): ?>
+				&lt;div class="slider_quote">
+					&lt;h3>&lt;?php echo $quote; ?>&lt;/h3>
+				&lt;/div>
+				&lt;?php endif; ?>
+				&lt;?php if( $author ): ?>
+				&lt;div class="slider_author">
+					&lt;h4>&lt;?php echo $author; ?>&lt;/h4>
+				&lt;/div>
+				&lt;?php endif; ?>
+			&lt;/div>
+		&lt;div class="slider_image">
+			&lt;img src="&lt;?php echo $myimage; ?>" alt="&lt;?php echo $alt; ?>" width="&lt;?php echo $width; ?>" height="&lt;?php echo $height; ?>"/>
+		&lt;/div>
+		&lt;?php endwhile; ?>
+		&lt;/li>
+		&lt;?php endif; ?>
+	&lt;/ul>
+&lt;/div>
+		</code></pre>
+        </section>
+        
+        <section class="prism-code">
+            <h5>Front Page Service Fields</h5>
+            <pre><code class="language-php">
+&lt;div class="services">
+	&lt;?php if( have_rows('service_fields') ): ?>
+
+		&lt;?php while( have_rows('service_fields') ): the_row();
+			$icon = get_sub_field('service_icon');
+			$title = get_sub_field('service_title');
+			$content = get_sub_field('service_text');
+			$link = get_sub_field('service_icon_link');
+			?>
+			&lt;div class="single-service">
+
+				&lt;?php if( $link ): ?>
+					&lt;a href="&lt;?php echo $link; ?>">&lt;img class="aligncenter" src="&lt;?php echo $icon['url']; ?>" alt="&lt;?php echo $icon['alt']; ?>" />
+				&lt;?php endif; ?>
+
+				&lt;?php if( $link ): ?>
+					&lt;/a>
+				&lt;?php endif; ?>
+
+			  	&lt;h4>&lt;?php echo $title; ?>&lt;/h4>
+
+				&lt;p>&lt;?php echo $content; ?>&lt;/p>
+			&lt;/div>
+		&lt;?php endwhile; ?>
+
+	&lt;?php endif; ?>
+&lt;/div>
+		</code></pre>
+        </section>    
 
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/libs/prism.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
