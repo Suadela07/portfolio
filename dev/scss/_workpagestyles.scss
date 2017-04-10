@@ -1,0 +1,121 @@
+.ytd-head h1,
+.js-head h1,
+.fe-head h1 {
+    margin-top: 32%;
+}
+
+.yaletown-header, 
+.js-header,
+.fe-header {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15%;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    width: 75%;
+    background-color: white;
+    border: 2px solid #BB0052;
+    margin-bottom: 3%;
+    justify-content: center;
+}
+
+.buttons a,
+.ytd-col-01 button a,
+.js-code-col-01 button a,
+.fe-code-col-01 button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.intro {
+    margin-top: 15%;
+}
+
+.intro-text {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ytd-tools,
+.js-tools,
+.fe-tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.ytd-tools img,
+.js-tools img,
+.fe-tools img {
+    width: 25%;
+    height: 100%;
+    margin: 3%;
+}
+
+.ytd-main-images,
+.ytd-design, 
+.js-main-image {
+    margin: 15% auto;
+}
+
+.ytd-main-images img,
+.planning img,
+.ytd-spreads img,
+.design-content img,
+.ytd-col-01 img,
+.ytd-col-02 img,
+.js-code-col-02 img,
+.code-content img,
+.js-main-image img,
+.fe-code-col-02 img,
+.fe-sass img {
+    width: 100%;
+    margin: 4% auto;
+}
+
+.js-wf-02,
+.js-wf-03 {
+    display: none;
+}
+
+.planning {
+    margin-top: 5%;
+}
+
+.ytd-col-01,
+.js-code-col-01,
+.fe-code-col-01 {
+    display: flex;
+    flex-direction: column;
+}
+
+.ytd-code button,
+.js-code button,
+.fe-code button,
+.prism-code {
+    margin: 10% auto;
+}
+
+.ytd-code button a,
+.js-code button a,
+.fe-code button a {
+    font-size: 1.3em;
+}
+
+.design-content p,
+.code-content p {
+    margin-top: 10%;
+}
+
+pre {
+    height: 300px;
+}

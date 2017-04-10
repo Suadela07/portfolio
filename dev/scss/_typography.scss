@@ -23,7 +23,9 @@ a {
     font-size: 1.5em;
 }
 
-h1, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
     margin-top: 5%;
 }
@@ -31,6 +33,12 @@ h1, h3 {
 h1 {
     font-family: "Rocksalt";
     font-size: 3em;
+}
+
+h2 {
+    font-family: "Gochi";
+    font-size: 2.5em;
+//    border-bottom: 2px solid #BB0052;
 }
 
 h3 {
@@ -61,6 +69,12 @@ h3 {
     line-height: 3em;
 }
 
+h5 {
+    font-family: "Noto";
+    font-size:1.5em;
+    margin-bottom: 5%;
+}
+
 p {
     font-family: "Noto";
     font-size: 1.2em;
@@ -72,4 +86,11 @@ p {
     font-size: 2em;
     line-height: 0.5em;
     padding: 4%;
+}
+
+figcaption {
+    font-family: "Patrick";
+    font-size: 1.3em;
+    font-style: italic;
+    margin-bottom: 5%;
 }

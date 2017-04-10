@@ -65,13 +65,19 @@ a {
   font-family: "Rocksalt";
   font-size: 1.5em; }
 
-h1, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
   margin-top: 5%; }
 
 h1 {
   font-family: "Rocksalt";
   font-size: 3em; }
+
+h2 {
+  font-family: "Gochi";
+  font-size: 2.5em; }
 
 h3 {
   font-family: "Patrick";
@@ -96,6 +102,11 @@ h3 {
   font-size: 1.2em;
   line-height: 3em; }
 
+h5 {
+  font-family: "Noto";
+  font-size: 1.5em;
+  margin-bottom: 5%; }
+
 p {
   font-family: "Noto";
   font-size: 1.2em;
@@ -106,6 +117,12 @@ p {
   font-size: 2em;
   line-height: 0.5em;
   padding: 4%; }
+
+figcaption {
+  font-family: "Patrick";
+  font-size: 1.3em;
+  font-style: italic;
+  margin-bottom: 5%; }
 
 * {
   box-sizing: border-box; }
@@ -141,13 +158,31 @@ p {
   z-index: 100000;
   /* Above WP toolbar */ }
 
+.hvr-grow-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform; }
+
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
 .wrapper {
   width: 80%;
   margin: 0 auto; }
 
 .work img,
 .about img,
-.skills img {
+.skills img,
+figure img,
+.ytd-tools img {
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
@@ -231,27 +266,109 @@ p {
   flex-direction: column;
   margin-top: 30%; }
 
-.yaletown-header {
-  display: flex;
-  flex-wrap: wrap;
+.ytd-head h1,
+.js-head h1,
+.fe-head h1 {
   margin-top: 32%; }
 
-.yaletown-header h1 {
-  margin-bottom: 15%; }
+.yaletown-header,
+.js-header,
+.fe-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15%; }
 
 .buttons {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
 
 button {
-  width: 90%;
+  width: 75%;
   background-color: white;
   border: 2px solid #BB0052;
   margin-bottom: 3%;
   justify-content: center; }
 
-.buttons a {
-  text-decoration: none; }
+.buttons a,
+.ytd-col-01 button a,
+.js-code-col-01 button a,
+.fe-code-col-01 button a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold; }
+
+.intro {
+  margin-top: 15%; }
+
+.intro-text {
+  width: 90%;
+  margin: 0 auto; }
+
+.ytd-tools,
+.js-tools,
+.fe-tools {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%; }
+
+.ytd-tools img,
+.js-tools img,
+.fe-tools img {
+  width: 25%;
+  height: 100%;
+  margin: 3%; }
+
+.ytd-main-images,
+.ytd-design,
+.js-main-image {
+  margin: 15% auto; }
+
+.ytd-main-images img,
+.planning img,
+.ytd-spreads img,
+.design-content img,
+.ytd-col-01 img,
+.ytd-col-02 img,
+.js-code-col-02 img,
+.code-content img,
+.js-main-image img,
+.fe-code-col-02 img,
+.fe-sass img {
+  width: 100%;
+  margin: 4% auto; }
+
+.js-wf-02,
+.js-wf-03 {
+  display: none; }
+
+.planning {
+  margin-top: 5%; }
+
+.ytd-col-01,
+.js-code-col-01,
+.fe-code-col-01 {
+  display: flex;
+  flex-direction: column; }
+
+.ytd-code button,
+.js-code button,
+.fe-code button,
+.prism-code {
+  margin: 10% auto; }
+
+.ytd-code button a,
+.js-code button a,
+.fe-code button a {
+  font-size: 1.3em; }
+
+.design-content p,
+.code-content p {
+  margin-top: 10%; }
+
+pre {
+  height: 300px; }
 
 @media only screen and (min-width: 420px) {
   .work {
