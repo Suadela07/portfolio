@@ -115,8 +115,7 @@ p {
 .first-char {
   float: left;
   font-size: 2em;
-  line-height: 0.5em;
-  padding: 4%; }
+  padding: 2% 4% 0% 1%; }
 
 figcaption {
   font-family: "Patrick";
@@ -282,10 +281,14 @@ figure img,
   flex-wrap: wrap;
   margin-top: 15%; }
 
-.buttons {
+.buttons,
+.ytd-main-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+
+.buttons {
+  width: 100%; }
 
 button {
   width: 75%;
@@ -335,6 +338,20 @@ button {
 .storm-col-02 {
   margin: 15% auto; }
 
+.ytd-spreads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end; }
+
+.ytd-spreads figure:nth-of-type(2) {
+  order: 1; }
+
+.ytd-spreads figure:nth-of-type(1) {
+  order: 2; }
+
+.ytd-spreads figure:nth-of-type(3) {
+  order: 3; }
+
 .ytd-main-images img,
 .planning img,
 .ytd-spreads img,
@@ -359,6 +376,8 @@ button {
   display: none; }
 
 .planning {
+  display: flex;
+  flex-direction: column;
   margin-top: 5%; }
 
 .ytd-col-01,
@@ -380,10 +399,6 @@ button {
 .fe-code button a,
 .storm-code button a {
   font-size: 1.3em; }
-
-.design-content p,
-.code-content p {
-  margin-top: 10%; }
 
 pre {
   height: 300px; }
@@ -414,7 +429,8 @@ pre {
     margin-top: 20%; }
   .domore {
     display: none; }
-  button {
+  button,
+  .ux-header button {
     width: calc(93% / 2);
     margin-right: 3%; } }
 
@@ -467,8 +483,14 @@ pre {
   button {
     width: calc(91% / 3);
     margin-right: 3%; }
+  .ux-header button {
+    width: calc(60% / 2); }
   button a {
-    font-size: 1em; } }
+    font-size: 1em; }
+  .js-wf-01 {
+    display: none; }
+  .js-wf-02 {
+    display: block; } }
 
 @media only screen and (min-width: 768px) {
   .toggleNav,
@@ -499,18 +521,194 @@ pre {
   .ux-tools img {
     width: calc(80% / 6);
     height: 100%;
-    margin: 3%; } }
+    margin: 3%; }
+  .ytd-main-images {
+    align-items: flex-end;
+    margin: 5% auto; }
+  .ytd-main-images figure {
+    width: 44%;
+    margin: 0% 3%; }
+  .ytd-code-cols,
+  .js-code-cols,
+  .fe-planning .planning,
+  .fe-design .design-content {
+    display: flex;
+    margin-bottom: 10%;
+    margin-top: 5%; }
+  .fe-planning .planning,
+  .fe-design .design-content {
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center; }
+  .fe-planning .planning p {
+    width: 45%;
+    margin-right: 10%; }
+  .fe-design .design-content p {
+    width: 45%;
+    margin-left: 10%; }
+  .fe-planning .planning figure,
+  .fe-design .design-content figure {
+    width: 45%; }
+  .ytd-col-01 {
+    width: 170%;
+    margin-right: 8%; }
+  .js-code-col-01 {
+    width: 150%;
+    margin-top: 10%;
+    margin-right: 5%; }
+  .ytd-col-01 button,
+  .js-code-col-01 button,
+  .fe-code-col-01 button,
+  .storm-code-col-01 button {
+    width: 65%; }
+  .ytd-col-01 p {
+    margin-bottom: 5%; }
+  .ytd-col-02,
+  .js-code-col-02 {
+    margin-top: 8%; }
+  .fe-code-wrapper,
+  .storm-code-wrapper {
+    display: flex;
+    flex-wrap: wrap; }
+  .fe-code-col-01,
+  .storm-code-col-01,
+  .fe-sass p {
+    width: 45%;
+    margin-top: 5%;
+    margin-right: 5%; }
+  .fe-code-col-02,
+  .storm-code-col-02 {
+    width: 45%;
+    margin-top: 10%; }
+  .fe-sass {
+    display: flex;
+    margin-top: 5%; }
+  .fe-sass figure {
+    width: 45%; }
+  .storm-planning figure {
+    width: 50%;
+    margin-left: 25%; }
+  .code-content {
+    display: flex;
+    padding-left: 8%; }
+  .code-content p {
+    width: 250%;
+    margin: 2% 7%; } }
+
+@media only screen and (min-width: 825px) {
+  .intro {
+    display: flex;
+    flex-wrap: wrap; }
+  .intro-text {
+    width: 45%; }
+  .fe-header .intro-text {
+    margin-top: 4%; }
+  .ytd-tools,
+  .js-tools,
+  .fe-tools,
+  .storm-tools,
+  .ux-tools {
+    width: 45%;
+    margin: 0 auto; }
+  .ytd-tools img {
+    width: calc(67% / 6);
+    height: 30%; }
+  .js-tools img {
+    width: calc(67% / 3);
+    height: 40%; }
+  .fe-tools img,
+  .ux-tools img {
+    width: calc(58% / 3);
+    height: 35%; }
+  .storm-tools img {
+    width: calc(55% / 2);
+    height: 38%; }
+  .js-main-image {
+    margin: 5% auto; }
+  .js-wf-02 {
+    display: none; }
+  .js-wf-03 {
+    display: block; }
+  .group-content,
+  .individual-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .group-content figure,
+  .group-content p,
+  .individual-content figure,
+  .individual-content p {
+    width: 40%;
+    margin: 5%;
+    align-items: center; }
+  .ux-head p {
+    margin-top: 10%; } }
 
 @media only screen and (min-width: 875px) {
   .contact {
     margin-top: 10%; }
   .contact-info {
-    margin-left: 30%; } }
+    margin-left: 30%; }
+  .planning {
+    display: flex;
+    flex-wrap: wrap; }
+  .ytd-planning .planning {
+    flex-direction: row; }
+  .ytd-planning .planning p {
+    width: 45%;
+    margin-top: 10%;
+    margin-right: 5%; }
+  .ytd-planning .planning figure {
+    width: 45%;
+    margin-left: 5%; }
+  .js-planning .planning p {
+    width: 50%;
+    margin-left: 25%; }
+  .ytd-spreads figure {
+    width: calc(82% / 3);
+    margin: 3%; }
+  .design-content {
+    display: flex;
+    margin-top: 5%; }
+  .code-content p {
+    margin-top: 10%; }
+  .design-content .js-col-02 {
+    width: 210%;
+    margin: 7% 4%; }
+  .storm-long-section {
+    display: flex; }
+  .storm-col-01 {
+    width: 45%;
+    margin-top: 10%;
+    order: 1; }
+  .storm-col-02 {
+    width: 45%;
+    margin: 5% auto;
+    order: 2; }
+  .storm-planning figure {
+    width: 70%;
+    margin-left: 13%; }
+  .storm-design {
+    margin-top: 20%; }
+  .fe-code-col-01,
+  .storm-code-col-01,
+  .fe-sass p {
+    margin-top: 10%; } }
 
 @media only screen and (min-width: 960px) {
   .skills img {
     width: calc(50% / 4);
-    margin: 6%; } }
+    margin: 6%; }
+  .ytd-head h1,
+  .js-head h1,
+  .fe-head h1,
+  .storm-head h1,
+  .ux-head h1 {
+    text-align: left; }
+  button {
+    width: calc(88% / 4); }
+  .ux-header button {
+    width: calc(40% / 2); } }
 
 @media only screen and (min-width: 1024px) {
   .work a {
@@ -522,7 +720,34 @@ pre {
   .skills {
     margin-top: 10%; }
   .skills img {
-    margin: 3% 6%; } }
+    margin: 3% 6%; }
+  .code-content p {
+    width: 180%;
+    margin-top: 17%; }
+  .ytd-col-01 {
+    width: 120%; }
+  .js-head .intro-text,
+  .storm-head .intro-text {
+    margin-top: 5%; }
+  .js-code-text {
+    width: 80%;
+    margin-left: 10%; } }
+
+@media only screen and (min-width: 1268px) {
+  .ytd-head,
+  .js-head,
+  .fe-head,
+  .storm-head,
+  .ux-head {
+    width: 75%; }
+  .ytd-head h1,
+  .js-head h1,
+  .fe-head h1,
+  .storm-head h1,
+  .ux-head h1 {
+    margin-top: 10%; }
+  .storm-planning p {
+    margin-bottom: 15%; } }
 
 @media only screen and (min-width: 1360px) {
   .overlay {
@@ -530,8 +755,24 @@ pre {
     height: 93vh;
     padding-top: 5%; }
   .skills img {
-    margin: 2% 6%; } }
+    margin: 2% 6%; }
+  .ytd-head,
+  .js-head,
+  .fe-head,
+  .storm-head,
+  .ux-head {
+    width: 60%; }
+  .code-content p {
+    margin-top: 20%; }
+  .ux-header button {
+    width: calc(30% / 2); } }
 
 @media only screen and (min-width: 1525px) {
   .contact-info {
-    margin-left: 35%; } }
+    margin-left: 35%; }
+  .ytd-head,
+  .js-head,
+  .fe-head,
+  .storm-head,
+  .ux-head {
+    width: 55%; } }

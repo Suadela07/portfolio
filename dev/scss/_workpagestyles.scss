@@ -16,10 +16,15 @@
     margin-top: 15%;
 }
 
-.buttons {
+.buttons,
+.ytd-main-images {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.buttons {
+    width: 100%;
 }
 
 button {
@@ -77,6 +82,24 @@ button {
     margin: 15% auto;
 }
 
+.ytd-spreads {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.ytd-spreads figure:nth-of-type(2) {
+    order: 1;
+}
+
+.ytd-spreads figure:nth-of-type(1) {
+    order: 2;
+}
+
+.ytd-spreads figure:nth-of-type(3) {
+    order: 3;
+}
+
 .ytd-main-images img,
 .planning img,
 .ytd-spreads img,
@@ -103,6 +126,8 @@ button {
 }
 
 .planning {
+    display: flex;
+    flex-direction: column;
     margin-top: 5%;
 }
 
@@ -127,11 +152,6 @@ button {
 .fe-code button a,
 .storm-code button a {
     font-size: 1.3em;
-}
-
-.design-content p,
-.code-content p {
-    margin-top: 10%;
 }
 
 pre {
