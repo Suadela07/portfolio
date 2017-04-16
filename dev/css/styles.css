@@ -633,16 +633,14 @@ pre {
   .individual-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
   .group-content figure,
   .group-content p,
   .individual-content figure,
   .individual-content p {
-    width: 40%;
-    margin: 5%;
-    align-items: center; }
-  .ux-head p {
-    margin-top: 10%; } }
+    width: 45%;
+    margin: 2%; } }
 
 @media only screen and (min-width: 875px) {
   .contact {
@@ -670,11 +668,19 @@ pre {
   .design-content {
     display: flex;
     margin-top: 5%; }
+  .ytd-design .design-content figure {
+    width: 50%; }
+  .ytd-design .design-content p {
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 5%; }
+  .js-design .design-content .js-col-01 {
+    width: 50%; }
+  .js-design .design-content .js-col-02 {
+    width: 50%;
+    margin: 19% 4%; }
   .code-content p {
     margin-top: 10%; }
-  .design-content .js-col-02 {
-    width: 210%;
-    margin: 7% 4%; }
   .storm-long-section {
     display: flex; }
   .storm-col-01 {
@@ -687,6 +693,7 @@ pre {
     order: 2; }
   .storm-planning figure {
     width: 70%;
+    margin-top: 10%;
     margin-left: 13%; }
   .storm-design {
     margin-top: 20%; }
@@ -708,7 +715,12 @@ pre {
   button {
     width: calc(88% / 4); }
   .ux-header button {
-    width: calc(40% / 2); } }
+    width: calc(40% / 2); }
+  .storm-col-01 {
+    width: 50%;
+    margin-top: 3%; }
+  .storm-col-02 {
+    width: 40%; } }
 
 @media only screen and (min-width: 1024px) {
   .work a {
@@ -731,7 +743,15 @@ pre {
     margin-top: 5%; }
   .js-code-text {
     width: 80%;
-    margin-left: 10%; } }
+    margin-left: 10%; }
+  .ytd-design .design-content p {
+    margin-top: 10%; }
+  .js-design .design-content .js-col-02 {
+    margin: 25% 4%; } }
+
+@media only screen and (min-width: 1150px) {
+  .js-design .design-content .js-col-02 {
+    margin: 31% 4%; } }
 
 @media only screen and (min-width: 1268px) {
   .ytd-head,

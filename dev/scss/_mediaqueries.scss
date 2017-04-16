@@ -363,19 +363,15 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
     
     .group-content figure,
     .group-content p,
     .individual-content figure,
     .individual-content p {
-        width: 40%;
-        margin: 5%;
-        align-items: center;
-    }
-    
-    .ux-head p {
-        margin-top: 10%;
+        width: 45%;
+        margin: 2%;
     }
 }
 
@@ -424,15 +420,29 @@
         margin-top: 5%;
     }
     
+    .ytd-design .design-content figure {
+        width: 50%;
+    }
+    
+    .ytd-design .design-content p {
+        width: 50%;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+    
+    .js-design .design-content .js-col-01 {
+        width: 50%;
+    }
+        
+    .js-design .design-content .js-col-02 {
+        width: 50%;
+        margin: 19% 4%;
+    }
+    
     .code-content p {
         margin-top: 10%;
     }
-    
-    .design-content .js-col-02 {
-        width: 210%;
-        margin: 7% 4%;
-    }
-    
+
     .storm-long-section {
         display: flex;
     }
@@ -451,6 +461,7 @@
     
     .storm-planning figure {
         width: 70%;
+        margin-top: 10%;
         margin-left: 13%;
     }
     
@@ -488,10 +499,14 @@
         width: calc(40% / 2);
     }
     
-//    .design-content p {
-//        width: 65%;
-//        margin: 6% 5%;
-//    }
+    .storm-col-01 {
+        width: 50%;
+        margin-top: 3%;
+    }
+    
+    .storm-col-02 {
+        width: 40%;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -534,6 +549,21 @@
         width: 80%;
         margin-left: 10%;
     }
+    
+    .ytd-design .design-content p {
+        margin-top: 10%;
+    }
+    
+    .js-design .design-content .js-col-02 {
+        margin: 25% 4%;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    
+    .js-design .design-content .js-col-02 {
+        margin: 31% 4%;
+    }
 }
 
 @media only screen and (min-width: 1268px) {
@@ -557,11 +587,6 @@
     .storm-planning p {
         margin-bottom: 15%;
     }
-    
-//    .design-content p {
-//        width: 53%;
-//        margin: 9% 5%;
-//    }
 }
 
 @media only screen and (min-width: 1360px) {
