@@ -557,12 +557,26 @@
     .js-design .design-content .js-col-02 {
         margin: 25% 4%;
     }
+    
+    .ytd-col-01 button,
+    .js-code-col-01 button,
+    .fe-code-col-01 button,
+    .storm-code-col-01 button {
+        width: 45%;
+    }
 }
 
 @media only screen and (min-width: 1150px) {
     
     .js-design .design-content .js-col-02 {
         margin: 31% 4%;
+    }
+    
+    .ytd-col-01 button,
+    .js-code-col-01 button,
+    .fe-code-col-01 button,
+    .storm-code-col-01 button {
+        width: 35%;
     }
 }
 
@@ -586,7 +600,7 @@
     
     .storm-planning p {
         margin-bottom: 15%;
-    }
+    }    
 }
 
 @media only screen and (min-width: 1360px) {
@@ -615,6 +629,13 @@
     
     .ux-header button {
         width: calc(30% / 2);
+    }
+    
+    .ytd-col-01 button,
+    .js-code-col-01 button,
+    .fe-code-col-01 button,
+    .storm-code-col-01 button {
+        width: 40%;
     }
 }
 

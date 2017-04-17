@@ -105,7 +105,7 @@ h3 {
 h5 {
   font-family: "Noto";
   font-size: 1.5em;
-  margin-bottom: 5%; }
+  margin-top: 5%; }
 
 p {
   font-family: "Noto";
@@ -747,11 +747,21 @@ pre {
   .ytd-design .design-content p {
     margin-top: 10%; }
   .js-design .design-content .js-col-02 {
-    margin: 25% 4%; } }
+    margin: 25% 4%; }
+  .ytd-col-01 button,
+  .js-code-col-01 button,
+  .fe-code-col-01 button,
+  .storm-code-col-01 button {
+    width: 45%; } }
 
 @media only screen and (min-width: 1150px) {
   .js-design .design-content .js-col-02 {
-    margin: 31% 4%; } }
+    margin: 31% 4%; }
+  .ytd-col-01 button,
+  .js-code-col-01 button,
+  .fe-code-col-01 button,
+  .storm-code-col-01 button {
+    width: 35%; } }
 
 @media only screen and (min-width: 1268px) {
   .ytd-head,
@@ -785,7 +795,12 @@ pre {
   .code-content p {
     margin-top: 20%; }
   .ux-header button {
-    width: calc(30% / 2); } }
+    width: calc(30% / 2); }
+  .ytd-col-01 button,
+  .js-code-col-01 button,
+  .fe-code-col-01 button,
+  .storm-code-col-01 button {
+    width: 40%; } }
 
 @media only screen and (min-width: 1525px) {
   .contact-info {
