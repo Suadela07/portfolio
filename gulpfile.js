@@ -56,7 +56,7 @@ gulp.task('images', function(){
   .pipe(gulp.dest('dist/images'))
 });
 
-// compile fonts from dev(app in this case) to dist folder
+// compile fonts from dev to dist folder
 gulp.task('fonts', function() {
     return gulp.src('dev/fonts/**/*')
     .pipe(gulp.dest('dist/fonts'))

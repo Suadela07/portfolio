@@ -1,4 +1,5 @@
 .ytd-head h1,
+.port-head h1,
 .js-head h1,
 .fe-head h1, 
 .storm-head h1,
@@ -6,7 +7,8 @@
     margin-top: 32%;
 }
 
-.yaletown-header, 
+.yaletown-header,
+.portfolio-header,
 .js-header,
 .fe-header,
 .storm-header,
@@ -37,6 +39,7 @@ button {
 
 .buttons a,
 .ytd-col-01 button a,
+.port-col-01 button a,
 .js-code-col-01 button a,
 .fe-code-col-01 button a,
 .storm-code-col-01 button a {
@@ -55,6 +58,7 @@ button {
 }
 
 .ytd-tools,
+.port-tools,
 .js-tools,
 .fe-tools,
 .storm-tools,
@@ -66,6 +70,7 @@ button {
 }
 
 .ytd-tools img,
+.port-tools img,
 .js-tools img,
 .fe-tools img,
 .storm-tools img,
@@ -76,10 +81,11 @@ button {
 }
 
 .ytd-main-images,
+.port-main-image,
 .ytd-design, 
 .js-main-image,
 .storm-col-02 {
-    margin: 15% auto;
+    margin: 15% auto 0%;
 }
 
 .ytd-spreads {
@@ -101,11 +107,15 @@ button {
 }
 
 .ytd-main-images img,
+.port-main-image img,
 .planning img,
 .ytd-spreads img,
+.port-planning-col-01 img,
+.port-planning-col-02 img,
 .design-content img,
 .ytd-col-01 img,
 .ytd-col-02 img,
+.port-col-02 img,
 .js-code-col-02 img,
 .code-content img,
 .js-main-image img,
@@ -132,6 +142,7 @@ button {
 }
 
 .ytd-col-01,
+.port-col-01,
 .js-code-col-01,
 .fe-code-col-01,
 .storm-code-col-01 {
@@ -140,6 +151,7 @@ button {
 }
 
 .ytd-code button,
+.port-code button,
 .js-code button,
 .fe-code button,
 .storm-code button,
@@ -148,6 +160,7 @@ button {
 }
 
 .ytd-code button a,
+.port-code button a,
 .js-code button a,
 .fe-code button a,
 .storm-code button a {

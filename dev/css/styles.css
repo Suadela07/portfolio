@@ -77,7 +77,9 @@ h1 {
 
 h2 {
   font-family: "Gochi";
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  text-decoration: underline;
+  text-decoration-color: #BB0052; }
 
 h3 {
   font-family: "Patrick";
@@ -154,8 +156,7 @@ figcaption {
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
-  /* Above WP toolbar */ }
+  z-index: 100000; }
 
 .hvr-grow-shadow {
   display: inline-block;
@@ -168,7 +169,9 @@ figcaption {
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform; }
 
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.1);
   transform: scale(1.1); }
@@ -181,7 +184,12 @@ figcaption {
 .about img,
 .skills img,
 figure img,
-.ytd-tools img {
+.ytd-tools img,
+.port-tools img,
+.js-tools img,
+.fe-tools img,
+.storm-tools img,
+.ux-tools img {
   -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
@@ -266,6 +274,7 @@ figure img,
   margin-top: 30%; }
 
 .ytd-head h1,
+.port-head h1,
 .js-head h1,
 .fe-head h1,
 .storm-head h1,
@@ -273,6 +282,7 @@ figure img,
   margin-top: 32%; }
 
 .yaletown-header,
+.portfolio-header,
 .js-header,
 .fe-header,
 .storm-header,
@@ -299,6 +309,7 @@ button {
 
 .buttons a,
 .ytd-col-01 button a,
+.port-col-01 button a,
 .js-code-col-01 button a,
 .fe-code-col-01 button a,
 .storm-code-col-01 button a {
@@ -314,6 +325,7 @@ button {
   margin: 0 auto; }
 
 .ytd-tools,
+.port-tools,
 .js-tools,
 .fe-tools,
 .storm-tools,
@@ -324,6 +336,7 @@ button {
   margin-top: 10%; }
 
 .ytd-tools img,
+.port-tools img,
 .js-tools img,
 .fe-tools img,
 .storm-tools img,
@@ -333,10 +346,11 @@ button {
   margin: 3%; }
 
 .ytd-main-images,
+.port-main-image,
 .ytd-design,
 .js-main-image,
 .storm-col-02 {
-  margin: 15% auto; }
+  margin: 15% auto 0%; }
 
 .ytd-spreads {
   display: flex;
@@ -353,11 +367,15 @@ button {
   order: 3; }
 
 .ytd-main-images img,
+.port-main-image img,
 .planning img,
 .ytd-spreads img,
+.port-planning-col-01 img,
+.port-planning-col-02 img,
 .design-content img,
 .ytd-col-01 img,
 .ytd-col-02 img,
+.port-col-02 img,
 .js-code-col-02 img,
 .code-content img,
 .js-main-image img,
@@ -381,6 +399,7 @@ button {
   margin-top: 5%; }
 
 .ytd-col-01,
+.port-col-01,
 .js-code-col-01,
 .fe-code-col-01,
 .storm-code-col-01 {
@@ -388,6 +407,7 @@ button {
   flex-direction: column; }
 
 .ytd-code button,
+.port-code button,
 .js-code button,
 .fe-code button,
 .storm-code button,
@@ -395,6 +415,7 @@ button {
   margin: 10% auto; }
 
 .ytd-code button a,
+.port-code button a,
 .js-code button a,
 .fe-code button a,
 .storm-code button a {
@@ -407,6 +428,7 @@ pre {
   button {
     width: 60%; }
   .ytd-code button a,
+  .port-code button a,
   .js-code button a,
   .fe-code button a,
   .storm-code button a {
@@ -416,6 +438,7 @@ pre {
   .work {
     margin-top: 15%; }
   .ytd-head h1,
+  .port-head h1,
   .js-head h1,
   .fe-head h1,
   .storm-head h1,
@@ -439,12 +462,14 @@ pre {
     width: calc(76% / 4);
     margin: 3%; }
   .yaletown-header,
+  .portfolio-header,
   .js-header,
   .fe-header,
   .storm-header,
   .ux-header {
     margin-top: 7%; }
   .ytd-tools,
+  .port-tools,
   .js-tools,
   .fe-tools,
   .storm-tools,
@@ -455,6 +480,7 @@ pre {
   .intro {
     margin-top: 5%; }
   .ytd-tools img,
+  .port-tools img,
   .js-tools img,
   .fe-tools img,
   .storm-tools img,
@@ -473,6 +499,7 @@ pre {
   .contact-info {
     margin-left: 5%; }
   .ytd-head h1,
+  .port-head h1,
   .js-head h1,
   .fe-head h1,
   .storm-head h1,
@@ -515,6 +542,7 @@ pre {
   .skills {
     margin-top: 15%; }
   .ytd-tools img,
+  .port-tools img,
   .js-tools img,
   .fe-tools img,
   .storm-tools img,
@@ -529,6 +557,7 @@ pre {
     width: 44%;
     margin: 0% 3%; }
   .ytd-code-cols,
+  .port-code-cols,
   .js-code-cols,
   .fe-planning .planning,
   .fe-design .design-content {
@@ -550,13 +579,21 @@ pre {
   .fe-design .design-content figure {
     width: 45%; }
   .ytd-col-01 {
-    width: 170%;
+    width: 50%;
     margin-right: 8%; }
+  .ytd-col-02,
+  .port-col-02,
+  .js-code-col-02 {
+    width: 50%; }
+  .port-code-cols,
+  .port-head .code-content {
+    align-items: center; }
   .js-code-col-01 {
-    width: 150%;
+    width: 50%;
     margin-top: 10%;
     margin-right: 5%; }
   .ytd-col-01 button,
+  .port-col-01 button,
   .js-code-col-01 button,
   .fe-code-col-01 button,
   .storm-code-col-01 button {
@@ -564,7 +601,8 @@ pre {
   .ytd-col-01 p {
     margin-bottom: 5%; }
   .ytd-col-02,
-  .js-code-col-02 {
+  .js-code-col-02,
+  .port-design .design-content {
     margin-top: 8%; }
   .fe-code-wrapper,
   .storm-code-wrapper {
@@ -583,6 +621,9 @@ pre {
   .fe-sass {
     display: flex;
     margin-top: 5%; }
+  .port-col-01 {
+    width: 50%;
+    margin-right: 5%; }
   .fe-sass figure {
     width: 45%; }
   .storm-planning figure {
@@ -592,8 +633,10 @@ pre {
     display: flex;
     padding-left: 8%; }
   .code-content p {
-    width: 250%;
-    margin: 2% 7%; } }
+    width: 50%;
+    margin: 2% 7%; }
+  .code-content figure {
+    width: 50%; } }
 
 @media only screen and (min-width: 825px) {
   .intro {
@@ -604,6 +647,7 @@ pre {
   .fe-header .intro-text {
     margin-top: 4%; }
   .ytd-tools,
+  .port-tools,
   .js-tools,
   .fe-tools,
   .storm-tools,
@@ -613,6 +657,9 @@ pre {
   .ytd-tools img {
     width: calc(67% / 6);
     height: 30%; }
+  .port-tools img {
+    width: calc(67% / 4);
+    height: 35%; }
   .js-tools img {
     width: calc(67% / 3);
     height: 40%; }
@@ -648,16 +695,32 @@ pre {
   .contact-info {
     margin-left: 30%; }
   .planning {
-    display: flex;
     flex-wrap: wrap; }
-  .ytd-planning .planning {
+  .ytd-planning .planning,
+  .port-planning .planning {
     flex-direction: row; }
-  .ytd-planning .planning p {
+  .ytd-planning .planning p,
+  .port-planning .planning p {
     width: 45%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: 5%; }
-  .ytd-planning .planning figure {
+  .ytd-planning .planning figure,
+  .port-planning .planning figure {
     width: 45%;
+    margin-left: 5%; }
+  .port-planning .planning {
+    align-items: center; }
+  .port-code-cols, .port-head .code-content p {
+    margin-top: 0%; }
+  .port-design-planning {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .port-planning-col-01,
+  .port-planning-col-02 {
+    width: 45%;
+    margin-top: 5%; }
+  .port-planning-col-02 {
     margin-left: 5%; }
   .js-planning .planning p {
     width: 50%;
@@ -707,6 +770,7 @@ pre {
     width: calc(50% / 4);
     margin: 6%; }
   .ytd-head h1,
+  .port-head h1,
   .js-head h1,
   .fe-head h1,
   .storm-head h1,
@@ -734,10 +798,14 @@ pre {
   .skills img {
     margin: 3% 6%; }
   .code-content p {
-    width: 180%;
     margin-top: 17%; }
-  .ytd-col-01 {
-    width: 120%; }
+  .ytd-col-01,
+  .ytd-col-02,
+  .port-col-01,
+  .port-col-02 {
+    width: 50%; }
+  .port-main-image {
+    margin: 5% auto; }
   .js-head .intro-text,
   .storm-head .intro-text {
     margin-top: 5%; }
@@ -749,28 +817,36 @@ pre {
   .js-design .design-content .js-col-02 {
     margin: 25% 4%; }
   .ytd-col-01 button,
+  .port-col-01 button,
   .js-code-col-01 button,
   .fe-code-col-01 button,
   .storm-code-col-01 button {
-    width: 45%; } }
+    width: 45%; }
+  .port-planning-col-01 p {
+    margin-top: 25%; } }
 
 @media only screen and (min-width: 1150px) {
+  .port-planning .planning p {
+    margin-top: 2%; }
   .js-design .design-content .js-col-02 {
     margin: 31% 4%; }
   .ytd-col-01 button,
+  .port-col-01 button,
   .js-code-col-01 button,
   .fe-code-col-01 button,
   .storm-code-col-01 button {
-    width: 35%; } }
+    width: 40%; } }
 
 @media only screen and (min-width: 1268px) {
   .ytd-head,
+  .port-head,
   .js-head,
   .fe-head,
   .storm-head,
   .ux-head {
     width: 75%; }
   .ytd-head h1,
+  .port-head h1,
   .js-head h1,
   .fe-head h1,
   .storm-head h1,
@@ -787,6 +863,7 @@ pre {
   .skills img {
     margin: 2% 6%; }
   .ytd-head,
+  .port-head,
   .js-head,
   .fe-head,
   .storm-head,
@@ -800,12 +877,15 @@ pre {
   .js-code-col-01 button,
   .fe-code-col-01 button,
   .storm-code-col-01 button {
-    width: 40%; } }
+    width: 45%; } }
 
 @media only screen and (min-width: 1525px) {
+  .port-planning .planning p {
+    margin-top: 0%; }
   .contact-info {
     margin-left: 35%; }
   .ytd-head,
+  .port-head,
   .js-head,
   .fe-head,
   .storm-head,

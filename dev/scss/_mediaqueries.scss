@@ -5,6 +5,7 @@
     }
     
     .ytd-code button a,
+    .port-code button a,
     .js-code button a,
     .fe-code button a,
     .storm-code button a {
@@ -19,6 +20,7 @@
     }
     
     .ytd-head h1,
+    .port-head h1,
     .js-head h1,
     .fe-head h1, 
     .storm-head h1,
@@ -55,7 +57,8 @@
         margin: 3%;
     }
     
-    .yaletown-header, 
+    .yaletown-header,
+    .portfolio-header,
     .js-header,
     .fe-header,
     .storm-header,
@@ -64,6 +67,7 @@
     }
     
     .ytd-tools,
+    .port-tools,
     .js-tools,
     .fe-tools,
     .storm-tools,
@@ -79,6 +83,7 @@
     }
     
     .ytd-tools img,
+    .port-tools img,
     .js-tools img,
     .fe-tools img,
     .storm-tools img,
@@ -108,6 +113,7 @@
     }
     
     .ytd-head h1,
+    .port-head h1,
     .js-head h1,
     .fe-head h1, 
     .storm-head h1,
@@ -179,6 +185,7 @@
     }
     
     .ytd-tools img,
+    .port-tools img,
     .js-tools img,
     .fe-tools img,
     .storm-tools img,
@@ -199,6 +206,7 @@
     }
     
     .ytd-code-cols,
+    .port-code-cols,
     .js-code-cols,
     .fe-planning .planning,
     .fe-design .design-content {
@@ -230,17 +238,29 @@
     }
     
     .ytd-col-01 {
-        width: 170%;
+        width: 50%;
         margin-right: 8%;
     }
     
+    .ytd-col-02,
+    .port-col-02,
+    .js-code-col-02 {
+        width: 50%;
+    }
+    
+    .port-code-cols,
+    .port-head .code-content {
+        align-items: center;
+    }
+    
     .js-code-col-01 {
-        width: 150%;
+        width: 50%;
         margin-top: 10%;
         margin-right: 5%;
     }
     
     .ytd-col-01 button,
+    .port-col-01 button,
     .js-code-col-01 button,
     .fe-code-col-01 button,
     .storm-code-col-01 button {
@@ -252,7 +272,8 @@
     }
     
     .ytd-col-02,
-    .js-code-col-02 {
+    .js-code-col-02,
+    .port-design .design-content {
         margin-top: 8%;
     }
     
@@ -281,6 +302,11 @@
         margin-top: 5%;
     }
     
+    .port-col-01 {
+        width: 50%;
+        margin-right: 5%;
+    }
+    
     .fe-sass figure {
         width: 45%;
     }
@@ -296,8 +322,12 @@
     }
     
     .code-content p {
-        width: 250%;
+        width: 50%;
         margin: 2% 7%;
+    }
+
+    .code-content figure {
+        width: 50%;
     }
 }
 
@@ -317,6 +347,7 @@
     }
     
     .ytd-tools,
+    .port-tools,
     .js-tools,
     .fe-tools,
     .storm-tools,
@@ -328,6 +359,11 @@
     .ytd-tools img {
         width: calc(67% / 6);
         height: 30%;
+    }
+    
+    .port-tools img {
+        width: calc(67% / 4);
+        height: 35%;
     }
     
     .js-tools img {
@@ -386,22 +422,48 @@
     }
     
     .planning {
-        display: flex;
         flex-wrap: wrap;
     }
     
-    .ytd-planning .planning {
+    .ytd-planning .planning,
+    .port-planning .planning {
         flex-direction: row;
     }
     
-    .ytd-planning .planning p {
+    .ytd-planning .planning p,
+    .port-planning .planning p {
         width: 45%;
-        margin-top: 10%;
+        margin-top: 5%;
         margin-right: 5%;
     }
     
-    .ytd-planning .planning figure {
+    .ytd-planning .planning figure,
+    .port-planning .planning figure {
         width: 45%;
+        margin-left: 5%;
+    }
+    
+    .port-planning .planning {
+        align-items: center;
+    }
+    
+    .port-code-cols, .port-head .code-content p {
+        margin-top: 0%;
+    }
+    
+    .port-design-planning {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .port-planning-col-01,
+    .port-planning-col-02 {
+        width: 45%;
+        margin-top: 5%;
+    }
+    
+    .port-planning-col-02 {
         margin-left: 5%;
     }
     
@@ -484,6 +546,7 @@
     }
     
     .ytd-head h1,
+    .port-head h1,
     .js-head h1,
     .fe-head h1, 
     .storm-head h1,
@@ -532,12 +595,18 @@
     }
     
     .code-content p {
-        width: 180%;
         margin-top: 17%;
     }
     
-    .ytd-col-01 {
-        width: 120%;
+    .ytd-col-01,
+    .ytd-col-02,
+    .port-col-01,
+    .port-col-02 {
+        width: 50%;
+    }
+    
+    .port-main-image {
+        margin: 5% auto;
     }
     
     .js-head .intro-text,
@@ -559,30 +628,41 @@
     }
     
     .ytd-col-01 button,
+    .port-col-01 button,
     .js-code-col-01 button,
     .fe-code-col-01 button,
     .storm-code-col-01 button {
         width: 45%;
     }
+    
+    .port-planning-col-01 p {
+        margin-top: 25%;
+    }
 }
 
 @media only screen and (min-width: 1150px) {
+    
+    .port-planning .planning p {
+        margin-top: 2%;
+    }
     
     .js-design .design-content .js-col-02 {
         margin: 31% 4%;
     }
     
     .ytd-col-01 button,
+    .port-col-01 button,
     .js-code-col-01 button,
     .fe-code-col-01 button,
     .storm-code-col-01 button {
-        width: 35%;
+        width: 40%;
     }
 }
 
 @media only screen and (min-width: 1268px) {
     
     .ytd-head,
+    .port-head,
     .js-head,
     .fe-head, 
     .storm-head,
@@ -591,6 +671,7 @@
     }
     
     .ytd-head h1,
+    .port-head h1,
     .js-head h1,
     .fe-head h1, 
     .storm-head h1,
@@ -616,6 +697,7 @@
     }
     
     .ytd-head,
+    .port-head,
     .js-head,
     .fe-head, 
     .storm-head,
@@ -635,17 +717,22 @@
     .js-code-col-01 button,
     .fe-code-col-01 button,
     .storm-code-col-01 button {
-        width: 40%;
+        width: 45%;
     }
 }
 
 @media only screen and (min-width: 1525px) {
+    
+    .port-planning .planning p {
+        margin-top: 0%;
+    }
     
     .contact-info {
         margin-left: 35%;
     }
     
     .ytd-head,
+    .port-head,
     .js-head,
     .fe-head, 
     .storm-head,
